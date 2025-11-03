@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ChartOverview from "./components/ChartOverviewWrapper";
+import ExpenseDashboard from "./components/ExpensesDashboard";
 
 export default function Home() {
   return (
@@ -8,6 +9,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ChartOverview />
+      <ExpenseDashboard />
     </main>
   );
-}
+} 
+
+ 

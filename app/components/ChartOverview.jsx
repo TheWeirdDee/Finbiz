@@ -4,7 +4,7 @@ import Image from "next/image";
 import red from "@/public/images/Red.png";
 import green from "@/public/images/Green.png";
 import blue from "@/public/images/Blue.png";
- 
+
 import {
   AreaChart,
   Area,
@@ -47,7 +47,7 @@ const ChartOverview = () => {
           {value}
         </span>
         {chartImage && (
-          <div className="w-10 sm:w-10 h-10 relative">
+          <div className="w-8 sm:w-10 h-10 relative">
             <Image
               src={chartImage}
               alt={`${title} trend`}
@@ -62,19 +62,17 @@ const ChartOverview = () => {
 
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
-  
+      {/* background layers */}
       <div className="absolute top-0 left-0 right-0 h-[60%] bg-[#1D1C20] hidden sm:block" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(56,189,248,0.15)_0%,_transparent_50%)] hidden sm:block" />
-
-      
       <div className="absolute inset-0 sm:hidden bg-[#242424]/30 backdrop-blur-lg" />
-
-     
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
        
-        <div className="bg-[#161616] rounded-2xl p-6 sm:p-8">
-     
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
+        {/* main card */}
+        
+        <div className="bg-[#161616] rounded-2xl p-6 sm:p-8 relative">
+          {/* stat cards */} 
           <div className="max-w-5xl mx-auto mb-10 sm:mb-12 lg:mb-10">
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               <StatCard
                 title="Total Profit"
@@ -141,13 +139,13 @@ const ChartOverview = () => {
               </div>
             </div>
 
-     
+           
             <div className="lg:col-span-6 bg-[#1D1C20] rounded-xl p-6">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold text-white">
                   Spend Overview
                 </h3>
-                <div className="flex gap-2 text-xs sm:text-sm">
+                <div className="flex gap-2 text-xs sm:text-sm mr-6">
                   <button className="px-2 sm:px-3 py-1 text-[#707070] hover:text-white transition-colors">
                     Day
                   </button>
@@ -199,89 +197,61 @@ const ChartOverview = () => {
               </div>
             </div>
 
-          
+        
+            <div className="lg:col-span-3 space-y-4">
+              <div>
+                <h4 className="text-xs sm:text-sm text-[#F5F5F5]">Employees</h4>
+              </div>
+
+              {[
+                { label: "Independent Contractor" },
+                { label: "Commission Employee" },
+                { label: "Shareholders" },
+              ].map((item) => (
+                <div key={item.label}>
+                  <h5 className="text-sm text-[#F5F5F5] mb-3">{item.label}</h5>
+                  <div className="space-y-4">
+                    <div
+                      className="h-3 rounded-full"
+                      style={{ width: "50%", backgroundColor: "#1D1C20" }}
+                    ></div>
+                    <div
+                      className="h-3 rounded-full"
+                      style={{ width: "90%", backgroundColor: "#4F4F4F" }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+    
+         
+
+         
+<div className="relative mt-12 flex justify-center">
  
-<div className="lg:col-span-3 space-y-8">
-  <div>
-    <h4 className="text-xs sm:text-sm text-[#F5F5F5]">
-      Employees
-    </h4>
-  </div>
- <div className="space-y-2">
-      
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "50%", backgroundColor: "#1D1C20" }}
-        > 
-      </div>
-       
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "90%", backgroundColor: "#4F4F4F" }}
-        > 
-      </div>
-    </div>
-  
-  <div>
-    <h5 className="text-sm text-[#F5F5F5] mb-2">Independent Contractor</h5>
-    <div className="space-y-2">
-     
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "50%", backgroundColor: "#1D1C20" }}
-        > 
-      </div>
-      
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "90%", backgroundColor: "#4F4F4F" }}
-        > 
-      </div>
-    </div>
-  </div>
-
-   
-  <div>
-    <h5 className="text-sm text-[#F5F5F5] mb-2">Commission Employee</h5>
-    <div className="space-y-2">
-      
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "50%", backgroundColor: "#1D1C20" }}
-        > 
-      </div>
-       
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "90%", backgroundColor: "#4F4F4F" }}
-        > 
-      </div>
-    </div>
+  <div className="relative z-20 bg-[#FFFFFF33] backdrop-blur-xl px-6 sm:px-6 py-2 rounded-xl flex items-center gap-4 sm:gap-4 text-sm text-white">
+    <button className="hover:text-[#A3DC2F] transition-colors">Products</button>
+    <button className="hover:text-[#A3DC2F] transition-colors">Integration</button>
+    <button className="hover:text-[#A3DC2F] transition-colors">Demo</button>
+    <button className="hover:text-[#A3DC2F] transition-colors">Pricing</button>
+    <button className="hover:text-[#A3DC2F] transition-colors font-semibold">Login</button>
   </div>
 
   
-  <div>
-    <h5 className="text-sm text-[#F5F5F5] mb-2">Shareholders</h5>
-     <div className="space-y-2">
-       
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "50%", backgroundColor: "#1D1C20" }}
-        > 
-      </div>
-       
-        <div
-          className="h-3 rounded-full"
-          style={{ width: "90%", backgroundColor: "#4F4F4F" }}
-        > 
-      </div>
-    </div>
+  <div className="absolute md:-bottom-60 -bottom-40 left-1/2 -translate-x-1/2 z-10 w-[60%] sm:w-[45%] pointer-events-none">
+    <Image
+      src="/images/linear.png"
+      alt="linear glow"
+      width={800}
+      height={200}
+      className="w-full object-contain opacity-80"
+    />
   </div>
 </div>
 
-
-          </div>
-        </div>
       </div>
     </div>
   );
