@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import red from "@/public/images/Red.png";
+import green from "@/public/images/Green.png";
+import blue from "@/public/images/Blue.png";
+ 
 import {
   AreaChart,
   Area,
@@ -27,7 +31,7 @@ const ChartOverview = () => {
   const StatCard = ({ title, value, change, isPositive, chartImage }) => (
     <div className="flex flex-col bg-[#242424]/70 backdrop-blur-md rounded-xl p-4 sm:p-5">
       <div className="flex items-center justify-between mb-1">
-        <span className="text-xs sm:text-sm text-#F5F5F5">{title}</span>
+        <span className="text-xs sm:text-sm text-[#F5F5F5]">{title}</span>
         {change && (
           <span
             className={`text-xs font-semibold ${
@@ -56,20 +60,6 @@ const ChartOverview = () => {
     </div>
   );
 
-  const ProgressBar = ({ label, value }) => (
-    <div className="flex flex-col gap-1">
-      <div className="flex justify-between items-center">
-        <span className="text-xs sm:text-sm text-[#F5F5F5]">{label}</span>
-      </div>
-      <div className="w-full bg-[#4F4F4F] rounded-full h-2">
-        <div
-          className="bg-[#4F4F4F] h-2 rounded-full transition-all"
-          style={{ width: `${value}%` }}
-        ></div>
-      </div>
-    </div>
-  );
-
   return (
     <div className="min-h-screen bg-black relative overflow-hidden">
   
@@ -91,21 +81,21 @@ const ChartOverview = () => {
                 value="$350.240"
                 change="+89.1%"
                 isPositive={true}
-                chartImage="/images/green.png"
+                chartImage={green}
               />
               <StatCard
                 title="Total Revenue"
                 value="$400.690"
                 change="+36.3%"
                 isPositive={false}
-                chartImage="/images/red.png"
+                chartImage={red}
               />
               <StatCard
                 title="Products Sold"
                 value="$200.000"
                 change="+20.5%"
                 isPositive={true}
-                chartImage="/images/blue.png"
+                chartImage={blue}
               />
             </div>
           </div>
