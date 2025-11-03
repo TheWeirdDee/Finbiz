@@ -98,14 +98,14 @@ const ChartOverview = () => {
                 value="$400.690"
                 change="+36.3%"
                 isPositive={false}
-                chartImage="/images/red.png"
+                chartImage="/images/blue.png"
               />
               <StatCard
                 title="Products Sold"
                 value="$200.000"
                 change="+20.5%"
                 isPositive={true}
-                chartImage="/images/blue.png"
+                chartImage="/images/red.png"
               />
             </div>
           </div>
