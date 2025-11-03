@@ -9,9 +9,9 @@ import User4 from "@/public/images/User4.png";
 
 export default function Home() {
   return (
-    <section className="bg-[#1D1C20] mt-10 text-white flex flex-col items-center justify-center min-h-screen px-6">
+    <section className="bg-[#1D1C20] text-white flex flex-col items-center justify-center min-h-screen px-6">
       {/* Tag */}
-      <div className="bg-[#171F05] flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full mb-4">
+      <div className="bg-[#171F05] md:mt-10 mt-5 flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full mb-4">
         <span className="bg-[#A3DC2F] text-[#0f0f0f] font-medium text-xs px-2 py-0.5 rounded-full">
           NEW
         </span>
