@@ -145,7 +145,7 @@ const ChartOverview = () => {
                 <h3 className="text-lg font-semibold text-white">
                   Spend Overview
                 </h3>
-                <div className="flex gap-2 text-xs sm:text-sm mr-6">
+                <div className="flex gap-2 text-xs sm:text-sm mr-12 mt-2 relative md:top-0 top-5">
                   <button className="px-2 sm:px-3 py-1 text-[#707070] hover:text-white transition-colors">
                     Day
                   </button>

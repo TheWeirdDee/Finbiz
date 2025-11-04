@@ -9,9 +9,9 @@ import User4 from "@/public/images/User4.png";
 
 export default function Home() {
   return (
-    <section className="bg-[#1D1C20] text-white flex flex-col items-center justify-center   px-6">
+    <section className="bg-[#1D1C20] text-white flex flex-col items-center justify-center px-6 py-16 sm:py-20 space-y-8">
       {/* Tag */}
-      <div className="bg-[#171F05] md:mt-25 mt-23 flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full mb-4">
+      <div className="bg-[#171F05] mt-4 flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full">
         <span className="bg-[#A3DC2F] text-[#0f0f0f] font-medium text-xs px-2 py-0.5 rounded-full">
           NEW
         </span>
@@ -21,29 +21,31 @@ export default function Home() {
         </span>
       </div>
 
-     
-      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center leading-tight mb-4">
+      {/* Heading */}
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
         The Finance Solutions <br /> For Your Business
       </h1>
 
-      <p className="text-gray-400 text-center max-w-2xl mb-8">
+      {/* Paragraph */}
+      <p className="text-gray-400 text-center max-w-2xl">
         Empower your finance team. The one-stop platform for all financial
         management of small and medium-sized businesses.
       </p>
 
-      <div className="flex items-center w-full max-w-md mb-10 bg-[#242424] rounded-full">
-  <input
-    type="email"
-    placeholder="Enter your email address"
-    className="flex-1 bg-transparent text-sm text-gray-300 px-5 py-4 focus:outline-none placeholder-gray-500"
-  />
-  <button className="bg-white text-black font-medium text-sm px-6 py-3 m-1 rounded-full hover:bg-gray-200 transition">
-    Book a Demo
-  </button>
-</div>
+      {/* Email Input + Button */}
+      <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-md gap-3 sm:gap-0 sm:bg-[#242424] bg-transparent sm:rounded-full">
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          className="flex-1 bg-[#242424] sm:bg-transparent text-sm text-gray-300 px-5 py-4 rounded-full sm:rounded-none focus:outline-none placeholder-gray-500"
+        />
+        <button className="bg-white text-black font-medium text-sm px-6 py-3 rounded-full hover:bg-gray-200 transition">
+          Book a Demo
+        </button>
+      </div>
 
-
-      <div className="flex flex-col items-center gap-2">
+      {/* Users + Reviews */}
+      <div className="flex flex-col items-center gap-3 mt-6">
         <div className="flex -space-x-3">
           {[User1, User2, User3, User4].map((user, index) => (
             <Image
@@ -56,10 +58,7 @@ export default function Home() {
             />
           ))}
         </div>
-
-        <p className="text-[#9B9CA1] text-sm mb-5">
-          1,200+ reviews (4.9 of 5)
-        </p>
+        <p className="text-[#9B9CA1] text-sm">1,200+ reviews (4.9 of 5)</p>
       </div>
     </section>
   );
