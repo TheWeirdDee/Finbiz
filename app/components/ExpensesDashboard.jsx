@@ -21,7 +21,7 @@ const ExpenseDashboard = () => {
     <section className="min-h-screen text-white py-1 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1400px] mx-auto space-y-8">
 
-        {/* ===== TOP ROW ===== */}
+        
         <div
           className="
             grid gap-5
@@ -31,8 +31,7 @@ const ExpenseDashboard = () => {
             auto-rows-[420px]
           "
         >
-
-          {/* Card 1 */}
+ 
           <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-5 flex flex-col">
             <h3 className="text-base font-medium mt-5">Simple analytics</h3>
             <p className="text-sm text-gray-400 mt-4">
