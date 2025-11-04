@@ -61,7 +61,7 @@ const ChartOverview = () => {
   );
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
+    <div className="min-h-screen relative overflow-hidden">
       {/* background layers */}
       <div className="absolute top-0 left-0 right-0 h-[60%] bg-[#1D1C20] hidden sm:block" />
       <div className="absolute inset-0 sm:hidden bg-[#242424]/30 backdrop-blur-lg" />
