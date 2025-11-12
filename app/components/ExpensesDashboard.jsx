@@ -57,7 +57,7 @@ const ExpenseDashboard = () => {
             </div>
           </div>
 
-          {/* Card 2 */}
+           
           <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-5 flex flex-col">
             <h3 className="text-lg font-semibold mt-5 text-center">
               Boosting Business.<br />Today and Tomorrow.
@@ -67,7 +67,7 @@ const ExpenseDashboard = () => {
               Freedom for your staff. Peace of mind for you.
             </p>
 
-            {/* Graph section */}
+         
             <div className="bg-[#1A1A1A] rounded-xl p-4 flex justify-center items-center mt-10">
               <div className="w-full h-[140px] relative">
                 <Image
@@ -80,19 +80,18 @@ const ExpenseDashboard = () => {
             </div>
           </div>
 
-          {/* Card 3 */}
+        
           <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-5 flex flex-col items-center text-center">
             <h3 className="text-base font-medium mt-5">Easy collaboration</h3>
             <p className="text-sm text-gray-400 mt-4">
               Seamlessly collaborate with your team members for faster workflow.
             </p>
 
-            {/* People Image with layered outline */}
+         
             <div className="relative flex items-center justify-center mt-20">
-              {/* Outer outline ring */}
+             
               <div className="absolute w-[160px] h-[160px] rounded-full bg-[#171717] border border-[#242424]" />
 
-              {/* Inner circle with bg and image */}
               <div className="relative w-[120px] h-[120px] rounded-full bg-[#1A1A1A] flex items-center justify-center overflow-hidden">
                 <Image
                   src={people}
@@ -104,9 +103,8 @@ const ExpenseDashboard = () => {
             </div>
           </div>
 
-        </div> {/* ✅ <-- FIXED: properly closed top grid div */}
+        </div>  
 
-        {/* ===== BOTTOM ROW ===== */}
         <div
           className="
             grid gap-5
@@ -116,30 +114,58 @@ const ExpenseDashboard = () => {
             auto-rows-[420px]
           "
         >
-          {/* Card 4 */}
-          <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-5 flex flex-col justify-between">
-            <h3 className="text-base font-semibold mb-2">
-              Real-time accounting at your fingertips.
-            </h3>
-            <p className="text-sm text-gray-400 mb-4">
-              Take the pain out of bookkeeping! Wave goodbye to paperwork and endless email reminders.
-            </p>
+         
+         <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-6 flex flex-col lg:flex-row justify-between gap-8">
+  
+  <div className="flex flex-col justify-between flex-1 relative min-h-[300px]">
+   
+    <div>
+      <h3 className="text-white text-lg sm:text-xl font-semibold mb-3">
+        Real-time accounting at your fingertips.
+      </h3>
+      <p className="text-sm text-gray-400 max-w-sm">
+        Take the pain out of book keeping! Wave goodbye to mountains of paperwork and endless email reminders.
+        There’s now a new way of accounting.
+      </p>
+    </div>
 
-            <div className="bg-[#0E0E0E] rounded-xl p-4 mt-4">
-              <h4 className="text-sm font-semibold mb-2">Monthly Invoices</h4>
-              <ul className="space-y-2 text-sm">
-                {["John Clark", "Michael Lens", "John Smith"].map((name, idx) => (
-                  <li key={idx} className="flex justify-between">
-                    <span className="text-gray-300">{name}</span>
-                    <span className="text-gray-500">download.pdf</span>
-                  </li>
-                ))}
-              </ul>
+   
+    <div className="absolute bottom-0">
+      <div className="bg-[#0E0E0E] rounded-xl p-5 w-64">
+        <h4 className="text-gray-400 text-sm mb-1">Total Balance</h4>
+        <p className="text-3xl font-bold text-white">$3453.00</p>
+        <div className="mt-2 h-[2px] w-full bg-[#2A2A2A] rounded-full"></div>
+        <div className="mt-1 h-[2px] w-2/3 bg-[#2A2A2A] rounded-full"></div>
+      </div>
+    </div>
+  </div>
+
+   
+  <div className="flex flex-col justify-end">
+    <div className="bg-[#0E0E0E] rounded-xl p-5 w-full sm:w-72">
+      <h4 className="text-white text-sm font-semibold mb-3">Monthly Invoice</h4>
+      <ul className="space-y-3">
+        {[
+          { name: "John Client", color: "bg-pink-500" },
+          { name: "Michele Leas", color: "bg-blue-500" },
+          { name: "John Smith", color: "bg-lime-400" },
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className={`w-6 h-6 rounded-full ${item.color}`}></div>
+              <span className="text-gray-200 text-sm">
+                {item.name}_download.Pdf
+              </span>
             </div>
-            <div className="mt-4 text-right text-xl font-bold">$3453.00</div>
-          </div>
+            <span className="text-gray-500 text-lg font-semibold">⋮</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
 
-          {/* Card 5 */}
+
           <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-6 flex flex-col justify-center text-center">
             <h3 className="text-lg font-semibold mb-3">Optimise expense Management as a team</h3>
             <p className="text-sm text-gray-400 mb-6">

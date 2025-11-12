@@ -226,9 +226,7 @@ const ChartOverview = () => {
         </div>
 
     
-         
-
-         
+              
 <div className="relative mt-12 flex justify-center">
  
   <div className="relative z-20 bg-[#FFFFFF33] backdrop-blur-xl px-6 sm:px-6 py-2 rounded-xl flex items-center gap-4 sm:gap-4 text-sm text-white">
