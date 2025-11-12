@@ -4,7 +4,6 @@ import Image from "next/image";
 import red from "@/public/images/Red.png";
 import green from "@/public/images/Green.png";
 import blue from "@/public/images/Blue.png";
-
 import {
   AreaChart,
   Area,
@@ -15,6 +14,38 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+const StatCard = ({ title, value, change, isPositive, chartImage }) => (
+  <div className="flex flex-col bg-[#242424]/70 backdrop-blur-md rounded-xl p-4 sm:p-5">
+    <div className="flex items-center justify-between mb-1">
+      <span className="text-xs sm:text-sm text-[#F5F5F5]">{title}</span>
+      {change && (
+        <span
+          className={`text-xs font-semibold ${
+            isPositive ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {change}
+        </span>
+      )}
+    </div>
+    <div className="flex items-center justify-between">
+      <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
+        {value}
+      </span>
+      {chartImage && (
+        <div className="w-8 sm:w-10 h-10 relative">
+          <Image
+            src={chartImage}
+            alt={`${title} trend`}
+            fill
+            className="object-contain"
+          />
+        </div>
+      )}
+    </div>
+  </div>
+);
+ 
 const ChartOverview = () => {
   const chartData = [
     { name: "Jan", value: 30 },
@@ -28,49 +59,17 @@ const ChartOverview = () => {
     { name: "Sep", value: 65 },
   ];
 
-  const StatCard = ({ title, value, change, isPositive, chartImage }) => (
-    <div className="flex flex-col bg-[#242424]/70 backdrop-blur-md rounded-xl p-4 sm:p-5">
-      <div className="flex items-center justify-between mb-1">
-        <span className="text-xs sm:text-sm text-[#F5F5F5]">{title}</span>
-        {change && (
-          <span
-            className={`text-xs font-semibold ${
-              isPositive ? "text-green-500" : "text-red-500"
-            }`}
-          >
-            {change}
-          </span>
-        )}
-      </div>
-      <div className="flex items-center justify-between">
-        <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">
-          {value}
-        </span>
-        {chartImage && (
-          <div className="w-8 sm:w-10 h-10 relative">
-            <Image
-              src={chartImage}
-              alt={`${title} trend`}
-              fill
-              className="object-contain"
-            />
-          </div>
-        )}
-      </div>
-    </div>
-  );
-
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* background layers */}
+       
       <div className="absolute top-0 left-0 right-0 h-[60%] bg-[#1D1C20] hidden sm:block" />
       <div className="absolute inset-0 sm:hidden bg-[#242424]/30 backdrop-blur-lg" />
        
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 lg:py-16">
-        {/* main card */}
+       
         
         <div className="bg-[#161616] rounded-2xl p-6 sm:p-8 relative">
-          {/* stat cards */} 
+         
           <div className="max-w-5xl mx-auto mb-10 sm:mb-12 lg:mb-10">
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
