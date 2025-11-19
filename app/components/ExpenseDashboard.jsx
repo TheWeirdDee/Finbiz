@@ -140,7 +140,7 @@ const ExpenseDashboard = () => {
                 </div>
               </div>
 
-              <div className="hidden lg:block flex-1">
+              <div className="hidden md:block flex-1">
                 <div className="bg-[#0E0E0E] rounded-xl p-5 w-full">
                   <h4 className="text-white text-sm font-semibold mb-3">
                     Monthly Invoice
@@ -184,14 +184,8 @@ const ExpenseDashboard = () => {
                 </div>
               </div>
 
-              <div className="flex lg:hidden gap-4 w-full">
-                <div className="bg-[#0E0E0E] rounded-xl p-5 w-1/2 mt-22">
-                  <h4 className="text-gray-400 text-sm mb-1">Total Balance</h4>
-                  <p className="text-3xl font-bold text-white">$3453.00</p>
-                  <div className="mt-2 h-[4px] w-full bg-[#2A2A2A] rounded-full"></div>
-                  <div className="mt-1 h-[4px] w-35 bg-[#2A2A2A] rounded-full"></div>
-                  <div className="mt-1 h-[4px] w-20 bg-[#2A2A2A] rounded-full"></div>
-                </div>
+              <div className="flex  md:hidden gap-4 w-full">
+                 
 
                 <div className="bg-[#0E0E0E] rounded-xl p-3 w-1/1">
                   <h4 className="text-white text-sm font-semibold mb-3">

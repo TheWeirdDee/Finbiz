@@ -18,7 +18,7 @@ const TestimonialCarousel = () => {
   const [offset, setOffset] = useState(0);
 
   const TestimonialCard = ({ testimonial }) => (
-    <div className="bg-[#161616] rounded-lg p-6 sm:p-8 flex-shrink-0 w-[400px] md:w-[350px] relative">
+    <div className="bg-[#161616] rounded-lg p-9 sm:p-8 flex-shrink-0 w-[350px] md:w-[350px] relative">
       <p className="text-gray-300 text-sm sm:text-base mb-6">{testimonial.text}</p>
       <div className="flex items-center gap-3">
         <div className={`${testimonial.color} w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold text-sm`}>
