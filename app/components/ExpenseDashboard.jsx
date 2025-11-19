@@ -6,6 +6,9 @@ import Image from "next/image";
 import analyticsGraph from "@/public/images/analyticsGraph.png";
 import graph from "@/public/images/graph.png";
 import people from "@/public/images/people.png";
+import monthlyInvoiceOne from "@/public/images/MonthlyInvoiceOne.png";
+import monthlyInvoiceTwo from "@/public/images/MonthlyInvoiceTwo.png";
+import monthlyInvoiceThree from "@/public/images/MonthlyInvoiceThree.png";
 
 const chartData = [
   { name: "Jan", value: 40 },
@@ -22,12 +25,14 @@ const ExpenseDashboard = () => {
       <div className="max-w-[1400px] mx-auto space-y-8">
         <div
           className="
-            grid gap-5
-            grid-cols-1
-            lg:grid-cols-[300px_620px_300px]
-            justify-center
-            auto-rows-[420px]
-          "
+           grid gap-5
+    grid-cols-1
+    sm:grid-cols-3
+    lg:grid-cols-3
+    xl:grid-cols-[300px_620px_300px]
+    auto-rows-[420px]
+    justify-center
+  "
         >
           <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-5 flex flex-col">
             <h3 className="text-base font-medium mt-5">Simple analytics</h3>
@@ -105,106 +110,132 @@ const ExpenseDashboard = () => {
           className="
             grid gap-5
             grid-cols-1
-            lg:grid-cols-[620px_620px]
+            lg:grig-cols-2
+            xl:grid-cols-[620px_620px]
             justify-center
             auto-rows-[420px]
           "
         >
-      <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-6 
-flex flex-col lg:flex-row justify-between gap-6">
+          <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-6">
+            <div className="w-full mb-6">
+              <h3 className="text-white text-lg sm:text-xl font-semibold mb-3">
+                Real-time accounting at your fingertips.
+              </h3>
 
-  {/* TEXT SECTION — stays untouched */}
-  <div className="flex flex-col justify-between flex-1 lg:min-h-[300px] w-full">
-    <div className="w-full">
-      <h3 className="text-white text-lg sm:text-xl font-semibold mb-3">
-        Real-time accounting at your fingertips.
-      </h3>
-
-      <p className="text-sm text-gray-400">
-        Take the pain out of book keeping! Wave goodbye to mountains
-        of paperwork and endless email reminders. There’s now a new
-        way of accounting.
-      </p>
-    </div>
-
-    {/* TOTAL BALANCE — stays at bottom left on desktop */}
-    <div className="mt-6 hidden lg:block">
-      <div className="bg-[#0E0E0E] rounded-xl p-5 w-full">
-        <h4 className="text-gray-400 text-sm mb-1">Total Balance</h4>
-        <p className="text-3xl font-bold text-white">$3453.00</p>
-        <div className="mt-2 h-[2px] w-full bg-[#2A2A2A] rounded-full"></div>
-        <div className="mt-1 h-[2px] w-2/3 bg-[#2A2A2A] rounded-full"></div>
-      </div>
-    </div>
-  </div>
-
-  {/* RIGHT SECTION */}
-  <div className="flex flex-col justify-end flex-1">
-
-    {/* MOBILE: show Both Cards Side-by-Side */}
-    <div className="flex lg:hidden gap-4 w-full mt-6">
-      <div className="bg-[#0E0E0E] rounded-xl p-5 w-1/2">
-        <h4 className="text-gray-400 text-sm mb-1">Total Balance</h4>
-        <p className="text-3xl font-bold text-white">$3453.00</p>
-        <div className="mt-2 h-[2px] w-full bg-[#2A2A2A] rounded-full"></div>
-        <div className="mt-1 h-[2px] w-2/3 bg-[#2A2A2A] rounded-full"></div>
-      </div>
-
-      <div className="bg-[#0E0E0E] rounded-xl p-5 w-1/2">
-        <h4 className="text-white text-sm font-semibold mb-3">
-          Monthly Invoice
-        </h4>
-        <ul className="space-y-3">
-          {[
-            { name: "John Client", color: "bg-pink-500" },
-            { name: "Michele Leas", color: "bg-blue-500" },
-            { name: "John Smith", color: "bg-lime-400" },
-          ].map((item, idx) => (
-            <li key={idx} className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className={`w-6 h-6 rounded-full ${item.color}`} />
-                <span className="text-gray-200 text-sm">
-                  {item.name}_download.Pdf
-                </span>
-              </div>
-
-              <span className="text-gray-500 text-lg font-semibold">⋮</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-
-    {/* DESKTOP: Monthly Invoice stays on the right */}
-    <div className="hidden lg:block bg-[#0E0E0E] rounded-xl p-5 w-full mt-6">
-      <h4 className="text-white text-sm font-semibold mb-3">
-        Monthly Invoice
-      </h4>
-
-      <ul className="space-y-3">
-        {[
-          { name: "John Client", color: "bg-pink-500" },
-          { name: "Michele Leas", color: "bg-blue-500" },
-          { name: "John Smith", color: "bg-lime-400" },
-        ].map((item, idx) => (
-          <li key={idx} className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className={`w-6 h-6 rounded-full ${item.color}`} />
-              <span className="text-gray-200 text-sm">
-                {item.name}_download.Pdf
-              </span>
+              <p className="text-sm text-gray-400">
+                Take the pain out of book keeping! Wave goodbye to mountains of
+                paperwork and endless email reminders. There’s now a new way of
+                accounting.
+              </p>
             </div>
 
-            <span className="text-gray-500 text-lg font-semibold">⋮</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+            <div className="flex flex-col lg:flex-row justify-between gap-6 md:mt-20 mt-0">
+              <div className="hidden lg:block flex-1 mt-16">
+                <div className="bg-[#0E0E0E] rounded-xl p-5 w-full">
+                  <h4 className="text-gray-400 text-sm mb-1">Total Balance</h4>
+                  <p className="text-3xl font-bold text-white">$3453.00</p>
+                  <div className="mt-2 h-[4px] w-full bg-[#2A2A2A] rounded-full"></div>
+                  <div className="mt-1 h-[4px] w-35 bg-[#2A2A2A] rounded-full"></div>
+                  <div className="mt-1 h-[4px] w-20 bg-[#2A2A2A] rounded-full"></div>
+                </div>
+              </div>
 
-  </div>
-</div>
+              <div className="hidden lg:block flex-1">
+                <div className="bg-[#0E0E0E] rounded-xl p-5 w-full">
+                  <h4 className="text-white text-sm font-semibold mb-3">
+                    Monthly Invoice
+                  </h4>
 
+                  <ul className="space-y-3">
+                    {[
+                      { name: "John Client", img: monthlyInvoiceOne },
+                      { name: "Michele Leas", img: monthlyInvoiceTwo },
+                      { name: "John Smith", img: monthlyInvoiceThree },
+                    ].map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center justify-between gap-3"
+                      >
+                        <div className="flex flex-col">
+                          <div className="flex items-center gap-3">
+                            <div className="w-6 h-6 rounded-full overflow-hidden">
+                              <Image
+                                src={item.img}
+                                alt={item.name}
+                                width={24}
+                                height={24}
+                                className="object-cover"
+                              />
+                            </div>
+                            <span className="text-gray-200 text-sm">
+                              {item.name}_download.Pdf
+                            </span>
+                          </div>
 
+                          <div className="mt-1 ml-9 h-[6px] w-35 max-w-[300px] bg-[#2A2A2A] rounded-full"></div>
+                        </div>
+
+                        <span className="text-gray-500 text-lg font-semibold">
+                          ⋮
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="flex lg:hidden gap-4 w-full">
+                <div className="bg-[#0E0E0E] rounded-xl p-5 w-1/2 mt-22">
+                  <h4 className="text-gray-400 text-sm mb-1">Total Balance</h4>
+                  <p className="text-3xl font-bold text-white">$3453.00</p>
+                  <div className="mt-2 h-[4px] w-full bg-[#2A2A2A] rounded-full"></div>
+                  <div className="mt-1 h-[4px] w-35 bg-[#2A2A2A] rounded-full"></div>
+                  <div className="mt-1 h-[4px] w-20 bg-[#2A2A2A] rounded-full"></div>
+                </div>
+
+                <div className="bg-[#0E0E0E] rounded-xl p-3 w-1/1">
+                  <h4 className="text-white text-sm font-semibold mb-3">
+                    Monthly Invoice
+                  </h4>
+                  <ul className="space-y-3">
+                    {[
+                      { name: "John Client", img: monthlyInvoiceOne },
+                      { name: "Michele Leas", img: monthlyInvoiceTwo },
+                      { name: "John Smith", img: monthlyInvoiceThree },
+                    ].map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center justify-between gap-3"
+                      >
+                        <div className="flex flex-col">
+                          <div className="flex items-center gap-3">
+                            <div className="w-6 h-6 rounded-full overflow-hidden">
+                              <Image
+                                src={item.img}
+                                alt={item.name}
+                                width={24}
+                                height={24}
+                                className="object-cover"
+                              />
+                            </div>
+                            <span className="text-gray-200 text-sm">
+                              {item.name}_download.Pdf
+                            </span>
+                          </div>
+
+                          <div className="mt-1 ml-9 h-[4px] w-35 max-w-[300px] bg-[#2A2A2A] rounded-full"></div>
+                        </div>
+
+                        <span className="text-gray-500 text-lg font-semibold">
+                          ⋮
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="bg-[#161616] rounded-[24px] border border-[#333333] p-6 flex flex-col justify-center text-center">
             <h3 className="text-lg font-semibold mb-3">
