@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ChartOverview from "./components/ChartOverviewWrapper";
-import ExpenseDashboard from "./components/ExpensesDashboard";
+import ExpenseDashboard from "./components/ExpenseDashboard";
 
 export default function Home() {
   return (
