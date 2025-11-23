@@ -4,6 +4,7 @@ import ChartOverview from "./components/ChartOverviewWrapper";
 import ExpenseDashboard from "./components/ExpenseDashboard";
 import TestimonialCarousel from "./components/TestimonialCarousel";
 import Pricing from "./components/Pricing"
+import RequestDemo from "./components/RequestDemo"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ExpenseDashboard />
       <TestimonialCarousel />
       <Pricing />
+      <RequestDemo />
     </main>
   );
 } 
