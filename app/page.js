@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import ChartOverview from "./components/ChartOverviewWrapper";
 import ExpenseDashboard from "./components/ExpenseDashboard";
 import TestimonialCarousel from "./components/TestimonialCarousel";
+import Pricing from "./components/Pricing"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ChartOverview />
       <ExpenseDashboard />
       <TestimonialCarousel />
+      <Pricing />
     </main>
   );
 } 

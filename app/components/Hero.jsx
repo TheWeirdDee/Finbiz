@@ -10,7 +10,7 @@ import User4 from "@/public/images/User4.png";
 export default function Home() {
   return (
     <section className="bg-[#1D1C20] text-white flex flex-col items-center justify-center px-6 py-16 sm:py-20 space-y-8">
-      {/* Tag */}
+       
       <div className="bg-[#171F05] mt-4 flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full">
         <span className="bg-[#A3DC2F] text-[#0f0f0f] font-medium text-xs px-2 py-0.5 rounded-full">
           NEW
@@ -21,18 +21,18 @@ export default function Home() {
         </span>
       </div>
 
-      {/* Heading */}
+      
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center leading-tight">
         The Finance Solutions <br /> For Your Business
       </h1>
 
-      {/* Paragraph */}
+      
       <p className="text-gray-400 text-center max-w-2xl">
         Empower your finance team. The one-stop platform for all financial
         management of small and medium-sized businesses.
       </p>
 
-      {/* Email Input + Button */}
+     
       <div className="flex flex-col sm:flex-row items-center justify-center w-full max-w-md gap-3 sm:gap-0 sm:bg-[#242424] bg-transparent sm:rounded-full">
         <input
           type="email"
@@ -43,8 +43,7 @@ export default function Home() {
           Book a Demo
         </button>
       </div>
-
-      {/* Users + Reviews */}
+ 
       <div className="flex flex-col items-center gap-3 mt-6">
         <div className="flex -space-x-3">
           {[User1, User2, User3, User4].map((user, index) => (
