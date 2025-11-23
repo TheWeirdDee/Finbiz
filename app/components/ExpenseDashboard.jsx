@@ -27,8 +27,8 @@ const ExpenseDashboard = () => {
           className="
            grid gap-5
     grid-cols-1
-    sm:grid-cols-3
-    lg:grid-cols-3
+    sm:grid-cols-1
+    lg:grid-cols-2
     xl:grid-cols-[300px_620px_300px]
     auto-rows-[420px]
     justify-center

@@ -3,8 +3,9 @@ import Hero from "./components/Hero";
 import ChartOverview from "./components/ChartOverviewWrapper";
 import ExpenseDashboard from "./components/ExpenseDashboard";
 import TestimonialCarousel from "./components/TestimonialCarousel";
-import Pricing from "./components/Pricing"
-import RequestDemo from "./components/RequestDemo"
+import Pricing from "./components/Pricing";
+import RequestDemo from "./components/RequestDemo";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <TestimonialCarousel />
       <Pricing />
       <RequestDemo />
+      <Footer />
     </main>
   );
 } 
