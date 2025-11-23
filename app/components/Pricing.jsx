@@ -30,7 +30,7 @@ const plans = [
       'Limited Support',
     ],
     buttonText: 'Get started',
-    buttonClass: 'bg-neutral-700 text-white hover:bg-neutral-600',
+    buttonClass: 'bg-white text-[#0F0F0F] hover:bg-neutral-600',
     nameColor: 'text-white',
   },
   {
@@ -47,8 +47,8 @@ const plans = [
       'Email support',  
     ],
     buttonText: 'Get started',
-    buttonClass: 'bg-white text-neutral-900 hover:bg-gray-100',
-    nameColor: 'text-white',
+    buttonClass: 'bg-white text-[#0F0F0F] hover:bg-gray-100',
+    nameColor: 'text-[#A3DC2F]',
   },
   {
     name: 'Enterprise',
@@ -66,39 +66,41 @@ const plans = [
     ],
     buttonText: 'Contact Us',
     
-    buttonClass: 'bg-lime-500 text-neutral-900 font-semibold hover:bg-lime-400 shadow-xl shadow-lime-500/30',
-    nameColor: 'text-lime-500',  
+    buttonClass: 'bg-[#A3DC2F] text-[#1D1C20] font-semibold hover:bg-lime-400 shadow-xl shadow-lime-800/10',
+    nameColor: 'text-[#A3DC2F]',  
   },
 ];
 
  
 const PricingCard = ({ plan }) => {
   return (
-    <div className="flex flex-col p-8 bg-neutral-800 rounded-xl shadow-2xl h-full transform transition-all duration-300 hover:scale-[1.02]">
+    <div className="flex flex-col p-8 bg-[#161616] rounded-xl shadow-2xl h-full transform transition-all duration-300 hover:scale-[1.02] pt-10">
      
       {plan.tag === 'Popular' && (
-        <div className="absolute top-0 right-0 -mt-3 mr-6 px-3 py-1 text-xs font-medium text-lime-500 bg-neutral-900 rounded-full shadow-lg border border-lime-500/50">
+        <div className="absolute top-4 right-0  mr-6 px-3 py-1 text-xs font-medium text-lime-500 bg-neutral-900 rounded-full shadow-lg border border-lime-500/50">
           {plan.tag}
         </div>
       )}
 
    
-      <h2 className={`text-3xl font-bold mb-2 ${plan.nameColor}`}>{plan.name}</h2>
+      <h2 className={`text-3xl font-bold mb-8 text-center ${plan.nameColor}`}>{plan.name}</h2>
 
      
-      <p className="text-gray-400 mb-6 text-sm">{plan.description}</p>
+      <p className="text-gray-400 mb-6 text-sm text-center">{plan.description}</p>
 
       
-      <div className="flex items-end mb-8">
-        <span className="text-5xl font-extrabold text-white">${plan.price}</span>
-        <span className="text-gray-400 text-lg ml-2">/month</span>
-      </div>
+  <div className="flex mb-10 mt-10 justify-center border-b border-[#242424] pb-6">
+  <span className="text-5xl font-extrabold text-white">${plan.price}</span>
+  <span className="text-gray-400 text-lg ml-2">/month</span>
+</div>
+
+
 
      
       <ul className="space-y-4 mb-10 flex-grow">
         {plan.features.map((feature, index) => (
-          <li key={index} className="flex items-center text-gray-300">
-            <CheckIcon className="w-4 h-4 text-lime-500 mr-3 flex-shrink-0" />
+          <li key={index} className="flex items-center text-[#FBFBFB]">
+            <CheckIcon className="w-4 h-4 text-[#FBFBFB] mr-3 flex-shrink-0" />
             <span className="text-sm">{feature}</span>
           </li>
         ))}
@@ -106,7 +108,7 @@ const PricingCard = ({ plan }) => {
 
       
       <button
-        className={`w-full py-3 rounded-xl transition-colors duration-200 text-sm font-medium ${plan.buttonClass}`}
+        className={`w-full py-3 rounded-full transition-colors duration-200 text-sm font-medium ${plan.buttonClass}`}
       >
         {plan.buttonText}
       </button>
@@ -117,8 +119,8 @@ const PricingCard = ({ plan }) => {
  
 const App = () => {
   return (
-    g
-    <div className="min-h-screen bg-neutral-900 py-16 px-4 sm:px-6 lg:px-8 font-['Inter']">
+    
+    <div className="bg-[#1D1C20] py-8 px-6 sm:px-16 lg:px-28 font-['Inter']">
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-12 lg:mb-20">
