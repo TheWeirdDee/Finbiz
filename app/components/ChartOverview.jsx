@@ -35,11 +35,13 @@ const StatCard = ({ title, value, change, isPositive, chartImage }) => (
       {chartImage && (
         <div className="w-8 sm:w-10 h-10 relative">
           <Image
-            src={chartImage}
-            alt={`${title} trend`}
-            fill
-            className="object-contain"
-          />
+  src={chartImage}
+  alt={`${title} trend`}
+  fill
+  sizes="(max-width: 640px) 40px, 80px"
+  className="object-contain"
+/>
+
         </div>
       )}
     </div>
@@ -144,7 +146,7 @@ const ChartOverview = () => {
                 <h3 className="text-lg font-semibold text-white">
                   Spend Overview
                 </h3>
-                <div className="flex gap-2 text-xs sm:text-sm md:mr-12 mr-60 mt-2 relative md:top-0 top-5">
+                <div className="flex gap-2 text-xs sm:text-sm md:mr-12 mr-85 mt-2 relative md:top-0 top-5">
                   <button className="px-2 sm:px-3 py-1 text-[#707070] hover:text-white transition-colors">
                     Day
                   </button>

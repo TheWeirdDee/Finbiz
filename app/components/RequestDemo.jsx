@@ -52,7 +52,11 @@ export default function RequestDemo() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           whileHover={{ scale: 1.03, y: -5 }}
-          className="flex-1 flex justify-center md:justify-end"
+         className="
+            w-full md:flex-1 
+            flex justify-center md:justify-end 
+            "
+
         >
           <Image
             src={RequestDemoimg}

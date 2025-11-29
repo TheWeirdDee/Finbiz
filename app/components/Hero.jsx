@@ -2,16 +2,16 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import User1 from "@/public/images/User1.png";
-import User2 from "@/public/images/User2.png";
-import User3 from "@/public/images/User3.png";
-import User4 from "@/public/images/User4.png";
+import User1 from "@/public/images//Hero/herouserOne.png";
+import User2 from "@/public/images/Hero/herouserTwo.png";
+import User3 from "@/public/images/Hero/herouserThree.png";
+import User4 from "@/public/images/Hero/herouserFour.png";
 
 export default function Home() {
   return (
-    <section className="bg-[#1D1C20] text-white flex flex-col items-center justify-center px-6 py-16 sm:py-20 space-y-8">
+    <section className="bg-[#1D1C20] text-white flex flex-col items-center justify-center py-16 space-y-6">
        
-      <div className="bg-[#171F05] mt-4 flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full">
+      <div className="bg-[#171F05] md:mt-12 mt-12 flex items-center gap-2 border border-[#364C09] text-[#A3DC2F] text-sm px-4 py-1 rounded-full">
         <span className="bg-[#A3DC2F] text-[#0f0f0f] font-medium text-xs px-2 py-0.5 rounded-full">
           NEW
         </span>
@@ -28,7 +28,7 @@ export default function Home() {
 
       
       <p className="text-gray-400 text-center max-w-2xl">
-        Empower your finance team. The one-stop platform for all financial
+        Empower your finance team. The one stop platform for all financial
         management of small and medium-sized businesses.
       </p>
 
@@ -44,8 +44,8 @@ export default function Home() {
         </button>
       </div>
  
-      <div className="flex flex-col items-center gap-3 mt-6">
-        <div className="flex -space-x-3">
+      <div className="flex flex-col items-center gap-3">
+        <div className="flex -space-x-3  md:mt-5 mt-0">
           {[User1, User2, User3, User4].map((user, index) => (
             <Image
               key={index}
