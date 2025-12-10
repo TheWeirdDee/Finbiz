@@ -57,6 +57,7 @@ const ExpenseDashboard = () => {
                   alt="Analytics Growth Graph"
                   fill
                   className="object-contain"
+                  sizes="(max-width: 640px) 100px, (max-width: 1024px) 200px, 400px"
                 />
               </div>
             </div>
@@ -100,6 +101,7 @@ const ExpenseDashboard = () => {
                   alt="Team collaboration"
                   fill
                   className="object-contain"
+                  sizes="(max-width: 640px) 100px, (max-width: 768px) 120px, 160px"
                 />
               </div>
             </div>
@@ -110,7 +112,7 @@ const ExpenseDashboard = () => {
           className="
             grid gap-5
             grid-cols-1
-            lg:grig-cols-2
+            lg:grid-cols-2
             xl:grid-cols-[620px_620px]
             justify-center
             auto-rows-[420px]
